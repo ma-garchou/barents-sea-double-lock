@@ -2,7 +2,7 @@
 
 **Mapping where sea-ice retreat, energy potential and overlapping governance regimes converge in the Barents Sea**
 
-Data, processing scripts and figures for my Master 2 thesis in Geomatics and Spatial Modelling (Aix-Marseille University, ALLSH, 2026).
+Data, processing scripts and figures for my first-year Master's research dissertation (M1, Geomatics and Spatial Modelling, Aix-Marseille University, ALLSH, 2026).
 
 ![The Friction Map](figures/fig20_friction_map.png)
 
@@ -120,7 +120,7 @@ NOAA OISST v2.1 · NSIDC Sea Ice Index v3 · Copernicus Sentinel-1 (via ASF Vert
 
 ## Citation
 
-> Garchou, M.-A. (2026). *Norway's Northern Frontier: Mapping the Convergence of Sea Ice Retreat, Energy Potential, and Overlapping Governance Regimes in the Barents Sea* [Master's thesis, Aix-Marseille University]. https://github.com/ma-garchou/barents-sea-double-lock
+> Garchou, M.-A. (2026). *Norway's Northern Frontier: Mapping the Convergence of Sea Ice Retreat, Energy Potential, and Overlapping Governance Regimes in the Barents Sea* [Master's research dissertation (M1), Aix-Marseille University]. https://github.com/ma-garchou/barents-sea-double-lock
 
 A machine-readable citation is available in [`CITATION.cff`](CITATION.cff).
 
@@ -132,5 +132,5 @@ A machine-readable citation is available in [`CITATION.cff`](CITATION.cff).
 
 ## Author
 
-**Mohamed-Ali Garchou**, M2 Geomatics and Spatial Modelling, Aix-Marseille University
+**Mohamed-Ali Garchou**, Master's student in Geomatics and Spatial Modelling, Aix-Marseille University
 [LinkedIn](https://www.linkedin.com/in/mohamed-ali-garchou-796989328) · mohamedali.garchou@gmail.com

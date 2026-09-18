@@ -5,7 +5,7 @@ type: software
 authors:
   - family-names: Garchou
     given-names: Mohamed-Ali
-    affiliation: "Aix-Marseille University, Master Geomatics and Spatial Modelling"
+    affiliation: "Aix-Marseille University, Master's programme in Geomatics and Spatial Modelling"
 date-released: 2026-09-18
 license: MIT
 repository-code: "https://github.com/ma-garchou/barents-sea-double-lock"
@@ -21,7 +21,7 @@ keywords:
   - geomatics
 preferred-citation:
   type: thesis
-  thesis-type: "Master's thesis"
+  thesis-type: "Master's research dissertation (M1)"
   title: "Norway's Northern Frontier: Mapping the Convergence of Sea Ice Retreat, Energy Potential, and Overlapping Governance Regimes in the Barents Sea"
   authors:
     - family-names: Garchou
