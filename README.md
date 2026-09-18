@@ -2,7 +2,9 @@
 
 **Mapping where sea-ice retreat, energy potential and overlapping governance regimes converge in the Barents Sea**
 
-Data, processing scripts and figures for my first-year Master's research dissertation (M1, Geomatics and Spatial Modelling, Aix-Marseille University, ALLSH, 2026).
+Data, processing scripts and figures for my first-year Master's research dissertation (M1, Geomatics and Spatial Modelling, Aix-Marseille University, ALLSH, 2026), supervised by Pr. Sébastien Gadal (UMR 7300 ESPACE).
+
+**[Download the full dissertation (PDF)](thesis/Thesis_M1_MohamedAli_GARCHOU.pdf)**
 
 ![The Friction Map](figures/fig20_friction_map.png)
 
@@ -27,13 +29,14 @@ Climate opens the door. Law and politics keep it shut.
 | Share of the Norwegian mainland EEZ (15–40°E, 69–75°N) already gridded | 94.8 % of 292,443 km² | `03_licensing_grid_stats.py` |
 | Reconstructed Svalbard Fisheries Protection Zone | 787,902 km², i.e. 2.84 × the licensing grid; 418,180 km² north of 74°30′N | `04_svalbard_fpz.py` |
 | Seabed deeper than 500 m in the northern frame | 0.10 % | `02_bathymetry_filter.py` |
+| Nansen Legacy in-situ records, 75–80°N, 2017–2021 (21,876 station-days) | 57.1 % below 15 % SIC; 83.8 % in June–September | `07_insitu_validation.py` (data not redistributed) |
 | Mean March SIC over the frame, 1990–2024 | slope not significant (p = 0.51, R² = 0.01) | `01_sea_ice_trends.py` |
 | Barents extent trends 2000–2024 (NSIDC) | March −0.16, September −0.07 Mkm²/decade | `01_sea_ice_trends.py` |
 | SST anomaly 2015–2024 vs 1982–2000 | −0.92 °C to +2.35 °C | `scripts/gee/01_sst_atlantification.js` |
 | Melkøya island, vegetation share | 94.4 % (2000) → 52.1 % (2025) | `06_melkoya_landcover.py` |
 | Friction Map, four constraint classes | vector layer + areas per class | `05_friction_map.py` |
 
-All values except the NSIDC extent trends and the GEE outputs were re-run from the data in this repository while it was being prepared (see [Reproducibility](#reproducibility)).
+All values except the NSIDC extent trends, the in-situ statistics and the GEE outputs were re-run from the data in this repository while it was being prepared (see [Reproducibility](#reproducibility)).
 
 ## Workflow
 
@@ -65,6 +68,7 @@ The full method is described step by step in [`docs/methodology.md`](docs/method
 │   ├── snap/                  Sentinel-1 GRD preprocessing graph + batch runner
 │   └── python/                analysis steps 01-07 + config.py
 ├── figures/                   final thesis figures (author's own plates)
+├── thesis/                    full dissertation (PDF)
 ├── docs/methodology.md
 ├── environment.yml / requirements.txt
 ├── CITATION.cff
@@ -110,9 +114,13 @@ Results go to `outputs/` (git-ignored). Steps 01, 03 and 06 run straight away on
 - The Sentinel-1 evidence rests on two single-month mosaics (March 2020, March 2024), not on a multi-year stack.
 - All areas are measured in EPSG:3995, as in the thesis. This projection is conformal, not equal-area. `03_licensing_grid_stats.py` prints an equal-area check alongside.
 
+## The dissertation
+
+The full manuscript is available as a PDF: [`thesis/Thesis_M1_MohamedAli_GARCHOU.pdf`](thesis/Thesis_M1_MohamedAli_GARCHOU.pdf) (English).
+
 ## Figures
 
-The final plates are in [`figures/`](figures/). Their file names use the sequential numbers from the manuscript. Figures 3–6, 8–10 and 14 of the thesis are reproduced from third parties (Copernicus Marine, EUMETSAT OSI SAF, Norwegian Offshore Directorate, NSIDC). They are not redistributed here; their sources are cited in the thesis.
+The final plates are in [`figures/`](figures/). Their file names use the sequential numbers from the manuscript. Figures 3–6, 8–10 and 14 of the thesis are reproduced from third parties (Copernicus Marine, EUMETSAT OSI SAF, Norwegian Offshore Directorate, NSIDC). They are not provided as separate files; they appear only in the PDF, with their credits.
 
 ## Main data sources
 

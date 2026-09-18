@@ -1,4 +1,4 @@
-"""Step 3 - The first constraint quantified: the NOD licensing grid (thesis §4.2).
+"""Step 3 - The first constraint quantified: the NOD licensing grid (thesis §4.3).
 
 Inputs
   data/processed/vector/nod_blocks_barents.gpkg   NOD Barents block grid (ED50, EPSG:4230)

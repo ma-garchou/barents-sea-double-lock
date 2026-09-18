@@ -15,12 +15,13 @@ Final plates produced by the author for the thesis (cartography in QGIS, charts 
 | `fig17_workflow.png` | 17 | Geospatial data fusion workflow (Parts I–V) | draw.io |
 | `fig18_sentinel1_march2020_iskanten.png` | 18 | Sentinel-1 HH, March 2020, with Iskanten 2020 | `scripts/snap/` |
 | `fig19_sentinel1_march2024_iskanten.png` | 19 | Sentinel-1 HH, March 2024, with Iskanten 2020 | `scripts/snap/` |
+| `graph2_insitu_nansen_legacy_validation.png` | Graph 2 (§4.2) | Nansen Legacy in-situ SIC, 75–80°N, 2017–2021, against the 15 % threshold | `scripts/python/07` |
 | `fig20_friction_map.png` | 20 | The Friction Map | `scripts/python/05` |
 | `fig21_melkoya_2000_false_colour.png` | 21 | Landsat 7 false colour, August 2000 | `scripts/gee/04` |
 | `fig22_melkoya_2000_ndvi_classes.png` | 22 | NDVI classes, 2000 | `scripts/python/06` |
 | `fig23_melkoya_2025_false_colour.png` | 23 | Sentinel-2 false colour, August 2025 | `scripts/gee/04` |
 | `fig24_melkoya_2025_ndvi_classes.png` | 24 | NDVI classes, 2025 | `scripts/python/06` |
 
-Figures 3–6, 8–10 and 14 of the thesis come from third parties (Copernicus Marine Service, EUMETSAT OSI SAF, Norwegian Offshore Directorate, NSIDC). They are not redistributed here.
+Figures 3–6, 8–10 and 14 of the thesis come from third parties (Copernicus Marine Service, EUMETSAT OSI SAF, Norwegian Offshore Directorate, NSIDC). They are not provided as separate files; they appear only in the dissertation PDF, with their credits.
 
 Licence: CC BY 4.0 (see `../LICENSE-DATA.md`); underlying third-party data keep their own terms.

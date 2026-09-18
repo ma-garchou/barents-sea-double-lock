@@ -1,4 +1,4 @@
-"""Step 4 - The second constraint quantified: reconstructing the Svalbard box (thesis §4.3).
+"""Step 4 - The second constraint quantified: reconstructing the Svalbard box (thesis §4.4).
 
 There is no authoritative public polygon of the Svalbard Fisheries Protection
 Zone in the datasets used, so it is rebuilt geometrically:

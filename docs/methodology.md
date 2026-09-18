@@ -38,7 +38,7 @@ This page summarises the processing chain of thesis Chapter 3 (Figure 17) and li
 
 ## Part II: geopolitical and industrial framework (second lock)
 
-### 5. Licensing geometry (Fig. 10–11, §4.2)
+### 5. Licensing geometry (Fig. 10–11, §4.3)
 `scripts/python/03_licensing_grid_stats.py`
 - NOD FactMaps block grid, fields and licences (ED50). Operator and volume attributes were joined in QGIS.
 - Grid area, latitude-band breakdown, northernmost vertex, and coverage of the Norwegian mainland EEZ (VLIZ v12, clipped to 15–40°E / 69–75°N).
@@ -48,18 +48,19 @@ This page summarises the processing chain of thesis Chapter 3 (Figure 17) and li
 - Management-plan practice defines the Iskanten from the **frequency of ice occurrence in April** over a reference period, not from SIC. The thresholds are 30 % in Meld. St. 8 (2006) and 0.5 % in Meld. St. 20 (2020).
 - This quantity is kept separate from the 15 % SIC extent. The divergence in Fig. 13 is partly a divergence of definitions and partly a divergence of physical reality.
 
-### 7. Svalbard Fisheries Protection Zone (§4.3)
+### 7. Svalbard Fisheries Protection Zone (§4.4)
 `scripts/python/04_svalbard_fpz.py`
 - Svalbard land (Norwegian polygons north of 74°N): 60,233 km², against an official figure of about 61,022 km².
 - Buffer of 200 NM (370.4 km) in EPSG:3995, minus land, minus the Norwegian-mainland, Russian and Greenland EEZs.
 - Result: 787,902 km², of which 418,180 km² lies north of 74°30′N (10–40°E).
 
-## Part III: in-situ validation
+## Part III: in-situ validation (§4.2, Graph 2)
 
 `scripts/python/07_insitu_validation.py`, `scripts/python/01_sea_ice_trends.py`
-- Nansen Legacy: 21,876 station-day records, geolocated and filtered to the 75–80°N band.
+- Nansen Legacy (2017–2021): 21,876 station-day records, geolocated and filtered to the 75–80°N band.
 - ASSIST IceWatch 2021: metadata header skipped, concentration rescaled from tenths to percent.
-- Purpose: check that the 15 % satellite threshold matches the edge seen from a vessel.
+- Purpose: independent ground truth for the satellite retrievals, checked against the 15 % threshold.
+- Results: 57.1 % of all records fall below 15 % concentration and 54.6 % record no ice at all. In the June–September window the share below 15 % rises to 83.8 %. In March 2021 the pack consolidates well north of the Meld. St. 20 boundary.
 - NSIDC Sea Ice Index v3, Barents sector: OLS trends of the March and September extent, 2000–2024 (Fig. 2).
 - The OISST March SIC over the frame, 1990–2024, shows no significant trend (p = 0.51). At local scale in winter, interannual variability dominates.
 

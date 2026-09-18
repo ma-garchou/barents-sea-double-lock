@@ -18,9 +18,9 @@ All analysis is done in **EPSG:3995** (WGS 84 / Arctic Polar Stereographic). Lay
 | `iskanten_2020.gpkg` | Political ice-edge boundary, Meld. St. 20 (2019–2020) | 4326 | 6 | `scripts/gee/02` | Fig. 13, 18, 19 |
 | `s1_open_water_zones_march2020.gpkg` / `..._march2024.gpkg` | Open-water zones digitised on the Sentinel-1 March mosaics | 4326 | 2 / 2 | QGIS, on SNAP output | Fig. 18–19 |
 | `gebco_deepwater_500m_polygons.gpkg` | Seabed deeper than 500 m (technical-accessibility filter) | 4326 | 3 | `scripts/python/02` + QGIS | Fig. 15–16 |
-| `svalbard_fpz_reconstructed.gpkg` | Svalbard FPZ, 200 NM geometric reconstruction (787,902 km²). **Not the legal limit.** | 3995 | 1 | `scripts/python/04` | Fig. 20, §4.3 |
+| `svalbard_fpz_reconstructed.gpkg` | Svalbard FPZ, 200 NM geometric reconstruction (787,902 km²). **Not the legal limit.** | 3995 | 1 | `scripts/python/04` | Fig. 20, §4.4 |
 | `friction_map.gpkg` | Four constraint classes with area and share | 3995 | 4 | `scripts/python/05` | Fig. 20 |
-| `nod_blocks_barents.gpkg` | NOD Barents Sea block grid | 4230 (ED50) | 947 | NOD FactMaps | §4.2 |
+| `nod_blocks_barents.gpkg` | NOD Barents Sea block grid | 4230 (ED50) | 947 | NOD FactMaps | §4.3 |
 | `nod_fields_barents.gpkg` | Producing fields: Snøhvit, Goliat, Johan Castberg | 4230 | 3 | NOD FactMaps | Fig. 11, 15 |
 | `nod_licences_barents_current.gpkg` | Active production licences (operator attributes) | 4230 | 40 | NOD FactMaps | Fig. 11, 15 |
 
