@@ -1,0 +1,31 @@
+cff-version: 1.2.0
+message: "If you use this data or code, please cite it as below."
+title: "Norway's Northern Frontier: Mapping the Convergence of Sea Ice Retreat, Energy Potential, and Overlapping Governance Regimes in the Barents Sea - data and workflow"
+type: software
+authors:
+  - family-names: Garchou
+    given-names: Mohamed-Ali
+    affiliation: "Aix-Marseille University, Master Geomatics and Spatial Modelling"
+date-released: 2026-09-18
+license: MIT
+repository-code: "https://github.com/ma-garchou/barents-sea-double-lock"
+keywords:
+  - Barents Sea
+  - sea ice
+  - Sentinel-1
+  - SAR
+  - Google Earth Engine
+  - Svalbard Treaty
+  - marginal ice zone
+  - spatial conflict analysis
+  - geomatics
+preferred-citation:
+  type: thesis
+  thesis-type: "Master's thesis"
+  title: "Norway's Northern Frontier: Mapping the Convergence of Sea Ice Retreat, Energy Potential, and Overlapping Governance Regimes in the Barents Sea"
+  authors:
+    - family-names: Garchou
+      given-names: Mohamed-Ali
+  institution:
+    name: "Aix-Marseille University"
+  year: 2026

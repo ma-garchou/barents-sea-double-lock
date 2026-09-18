@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Sentinel-1 GRD preprocessing chain (thesis §3.4, workflow Part I, Figures 18-19).
+  Read -> Apply-Orbit-File -> ThermalNoiseRemoval -> Calibration (sigma0)
+       -> Speckle-Filter (Lee 7x7) -> Terrain-Correction -> LinearToFromdB -> Write (GeoTIFF)
+
+  Run with SNAP's Graph Processing Tool:
+    gpt s1_grd_preprocessing.xml -Pinput=S1A_EW_GRDM_....zip -Poutput=out/scene_sigma0_db.tif
+  or loop over a folder with run_snap_batch.py.
+
+  The Lee filter preserves edge sharpness at the ice/water transition, which is
+  the only feature of interest here. The -25 dB / 0 dB stretch is applied at
+  display time in QGIS, never before analysis.
+-->
+<graph id="S1_GRD_Barents">
+  <version>1.0</version>
+
+  <node id="Read">
+    <operator>Read</operator>
+    <parameters>
+      <file>${input}</file>
+    </parameters>
+  </node>
+
+  <node id="Apply-Orbit-File">
+    <operator>Apply-Orbit-File</operator>
+    <sources><sourceProduct refid="Read"/></sources>
+    <parameters>
+      <orbitType>Sentinel Precise (Auto Download)</orbitType>
+      <polyDegree>3</polyDegree>
+      <continueOnFail>true</continueOnFail>
+    </parameters>
+  </node>
+
+  <node id="ThermalNoiseRemoval">
+    <operator>ThermalNoiseRemoval</operator>
+    <sources><sourceProduct refid="Apply-Orbit-File"/></sources>
+    <parameters>
+      <removeThermalNoise>true</removeThermalNoise>
+    </parameters>
+  </node>
+
+  <node id="Calibration">
+    <operator>Calibration</operator>
+    <sources><sourceProduct refid="ThermalNoiseRemoval"/></sources>
+    <parameters>
+      <outputSigmaBand>true</outputSigmaBand>
+      <outputBetaBand>false</outputBetaBand>
+      <outputGammaBand>false</outputGammaBand>
+    </parameters>
+  </node>
+
+  <node id="Speckle-Filter">
+    <operator>Speckle-Filter</operator>
+    <sources><sourceProduct refid="Calibration"/></sources>
+    <parameters>
+      <filter>Lee</filter>
+      <filterSizeX>7</filterSizeX>
+      <filterSizeY>7</filterSizeY>
+    </parameters>
+  </node>
+
+  <node id="Terrain-Correction">
+    <operator>Terrain-Correction</operator>
+    <sources><sourceProduct refid="Speckle-Filter"/></sources>
+    <parameters>
+      <demName>GETASSE30</demName>
+      <pixelSpacingInMeter>40.0</pixelSpacingInMeter>
+      <mapProjection>EPSG:3995</mapProjection>
+      <nodataValueAtSea>false</nodataValueAtSea>
+      <saveSelectedSourceBand>true</saveSelectedSourceBand>
+    </parameters>
+  </node>
+
+  <node id="LinearToFromdB">
+    <operator>LinearToFromdB</operator>
+    <sources><sourceProduct refid="Terrain-Correction"/></sources>
+  </node>
+
+  <node id="Write">
+    <operator>Write</operator>
+    <sources><sourceProduct refid="LinearToFromdB"/></sources>
+    <parameters>
+      <file>${output}</file>
+      <formatName>GeoTIFF-BigTIFF</formatName>
+    </parameters>
+  </node>
+</graph>

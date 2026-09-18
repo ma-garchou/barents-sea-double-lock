@@ -1,0 +1,27 @@
+# third-party downloads and script outputs
+data/raw/*
+!data/raw/.gitkeep
+outputs/
+
+# heavy rasters that must never be committed
+*.SAFE/
+S1*_GRD*.zip
+*.dim
+*.data/
+
+# GIS side-car and lock files
+*.aux.xml
+*.qgz~
+*.qgs~
+*.gpkg-wal
+*.gpkg-shm
+*.lock
+
+# Python / OS
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.venv/
+.DS_Store
+Thumbs.db
+desktop.ini
